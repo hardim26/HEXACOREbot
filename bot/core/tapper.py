@@ -677,7 +677,7 @@ class Tapper:
                     await self.play_game_6(http_client=http_client)
                 
                 tm = random.randint (7200,36000)
-                logger.info(f"<light-yellow>{self.session_name}</light-yellow> | Going sleep "+str(tm)+"sec")
+                logger.info(f"<light-yellow>{self.session_name}</light-yellow> | Going sleep "+str(tm)+" sec")
 
                 
                 await asyncio.sleep(tm)
