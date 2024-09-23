@@ -176,7 +176,7 @@ class Tapper:
             referer_id = "196902732"
 
             if self.username == '':
-                self.username = self.fullname + self.lastname 
+                self.username = self.fullname 
             if self.username != '':
                 json = {
                     "user_id": int(self.user_id),  # Ensure user_id is a string
