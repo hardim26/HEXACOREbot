@@ -52,9 +52,9 @@ Before you begin, make sure you have the following installed:
 3. Record the API_ID and API_HASH provided after registering your application in the .env file.
 
 ## Installation
-You can download the [**repository**](https://github.com/HiddenCodeDevs/HEXACOREbot) by cloning it to your system and installing the necessary dependencies:
+You can download the [**repository**](https://github.com/hardim26/HEXACOREbot) by cloning it to your system and installing the necessary dependencies:
 ```shell
-git clone https://github.com/HiddenCodeDevs/HEXACOREbot.git
+git clone https://github.com/hardim26/HEXACOREbot.git
 cd HEXACOREbot
 ```
 
