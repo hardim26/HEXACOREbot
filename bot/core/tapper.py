@@ -676,7 +676,7 @@ class Tapper:
                 if settings.PLAY_HURTMEPLEASE_GAME:
                     await self.play_game_6(http_client=http_client)
                 
-                tm = random.randint (7200,36000)
+                self.tm = random.randint (7200,36000)
                 logger.info(f"<light-yellow>{self.session_name}</light-yellow> | Going sleep |"{self.tm}f" sec")
 
                 
