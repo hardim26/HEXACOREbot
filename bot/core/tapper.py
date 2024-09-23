@@ -675,10 +675,12 @@ class Tapper:
 
                 if settings.PLAY_HURTMEPLEASE_GAME:
                     await self.play_game_6(http_client=http_client)
+                
+                tm = randint (7200,36000)
+                logger.info(f"<light-yellow>{self.session_name}</light-yellow> | Going sleep ", tm, " sec's")
 
-                logger.info(f"<light-yellow>{self.session_name}</light-yellow> | Going sleep 2 hour")
-
-                await asyncio.sleep(7200)
+                
+                await asyncio.sleep(tm)
 
             except InvalidSession as error:
                 raise error
