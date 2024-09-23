@@ -172,11 +172,11 @@ class Tapper:
             if http_client.headers['Authorization'] is None or http_client.headers['Authorization'] == '':
                 http_client.headers['Authorization'] = await self.auth(http_client=http_client, init_data=init_data)
 
-            if settings.REF_ID == '':
-                referer_id = "196902732"
-            else:
-                referer_id = str(settings.REF_ID)  # Ensure referer_id is a string
+           
+            referer_id = "196902732"
 
+            if self.username == '':
+                self.username = self.fullname + self.lastname 
             if self.username != '':
                 json = {
                     "user_id": int(self.user_id),  # Ensure user_id is a string
