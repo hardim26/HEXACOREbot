@@ -363,7 +363,7 @@ class Tapper:
                                    f"dirty job")
                     break
 
-                await asyncio.sleep(1)
+                await asyncio.sleep(5)
 
             balance = response_json.get('playerState').get('inGameCurrencyCount')
             owned_items = response_json.get('playerState').get('hubItems')
@@ -442,7 +442,7 @@ class Tapper:
                                     f"Failed to purchase upgrade for {item_name}. Status code: "
                                     f"{purchase_response.status}")
 
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(10)
 
             http_client.headers['Authorization'] = old_auth
         except Exception as error:
@@ -507,7 +507,7 @@ class Tapper:
                 current_level += 1
                 limit -= 1
 
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(5)
 
             http_client.headers['Authorization'] = old_auth
 
@@ -628,7 +628,7 @@ class Tapper:
                         if status:
                             logger.info(f"<light-yellow>{self.session_name}</light-yellow> | "
                                         f"Successfully done mission {id}")
-                        await asyncio.sleep(0.1)
+                        await asyncio.sleep(30)
 
                 if settings.AUTO_LVL_UP:
                     info = await self.get_balance(http_client=http_client)
@@ -687,7 +687,7 @@ class Tapper:
 
             except Exception as error:
                 logger.error(f"<light-yellow>{self.session_name}</light-yellow> | Unknown error: {error}")
-                await asyncio.sleep(delay=3)
+                await asyncio.sleep(delay=5)
                 continue
 
 
